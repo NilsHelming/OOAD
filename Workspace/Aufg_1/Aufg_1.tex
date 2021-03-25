@@ -1,0 +1,91 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{%
+	ngerman,
+	ae,
+	times,  %% hier kann man die Schriftart einstellen
+	graphicx,
+	url,
+	scrlayer-scrpage,
+	lastpage,
+	mathtools,
+	geometry,
+	multicol,
+	cancel,
+	xcolor,
+	nicematrix,
+	xfrac,
+	tikz,
+	pgfplots,
+	amsmath,
+	colortbl,
+	centernot,
+	dsfont,
+	textgreek,
+	icomma,
+	pdfpages,
+	kvmap}
+\usepackage[thinlines]{easybmat}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\usetikzlibrary{intersections}
+\pgfplotsset{compat=1.17}
+\newcommand{\del}[1]{\cancel{~#1~}}
+\NiceMatrixOptions{ last-col,code-for-last-col = \color{blue}\scriptstyle,light-syntax}
+\newlength\dlf
+\newcommand\alignedhighlight[3]{
+  % #1 = color
+  % #2 = before alignment
+  % #3 = after alignment
+  &
+  \begingroup
+  \settowidth\dlf{$\displaystyle #2$}
+  \addtolength\dlf{\fboxsep+\fboxrule}
+  \hspace{-\dlf}
+  \fcolorbox{#1}{#1}{$\displaystyle #2 #3$}
+  \endgroup
+}
+\newcommand{\reference}[1]{ \text{\small{\textcolor{blue}{(#1)}}} }
+
+\newcommand{\topic}{Objektorientierte Analyse und Design}
+\newcommand{\subtopic}{Aufgabenblatt 01}
+\newcommand{\authors}{Nils Helming, Lukas Lübberding}
+
+%Head and Footnotes
+\setlength{\headheight}{2.1\baselineskip} %baselineskip = minimum distance bbetween the bottom of one line to another.
+\geometry{bottom = 3cm}
+\setlength{\headsep}{\baselineskip}
+\ihead[\topic\hrule]{\topic\hrule}
+\chead[\subtopic\\~]{\subtopic\\~}
+\ohead[\authors\\~]{\authors\\~}
+\ifoot[~]{~}
+\cfoot[~]{~}
+\ofoot[Seite \thepage~von \pageref{LastPage}]{Seite \thepage~von \pageref{LastPage}}
+
+%Paragraph spacings
+\setlength{\parindent}{0em} %em = with of an 'M'
+\setlength{\parskip}{1ex} %ex = height of an 'x'
+
+
+\newcommand{\V}{\lor}
+\newcommand{\A}{\land}
+\newcommand{\T}[1]{\overline{#1}}
+\newcommand{\eq}{\Leftrightarrow}
+\newcommand{\rarr}{\Rightarrow}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\unit}[1]{\text{#1}}
+\newcommand{\fracunit}[2]{\frac{\unit{#1}}{\unit{#2}}}
+\newcommand{\textsq}[1]{\ensuremath{\text{#1}^2}}
+\newcommand{\textpow}[2]{\ensuremath{\text{#1}^{#2}}}
+\newcommand{\tdot}{\ensuremath{\cdot}}
+
+
+\begin{document}
+% \includepdf[pages=-]{Modul01.pdf}
+\section*{Aufgabe 1}
+\subsection*{1a)}
+
+\end{document}
