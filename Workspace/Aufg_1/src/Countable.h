@@ -5,7 +5,7 @@
 class Countable {
 private:
     std::uint64_t ident;
-    static std::uint64_t ncount;
+    inline static std::uint64_t ncount = 0;
 
 public:
     Countable():ident(ncount) {
