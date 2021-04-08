@@ -26,7 +26,8 @@
 	textgreek,
 	icomma,
 	pdfpages,
-	kvmap}
+	kvmap,
+	listings}
 \usepackage[thinlines]{easybmat}
 \usetikzlibrary{datavisualization}
 \usetikzlibrary{datavisualization.formats.functions}
@@ -87,17 +88,19 @@
 % \includepdf[pages=-]{Modul01.pdf}
 \section*{Aufgabe 1}
 \subsection*{1 a)}
-unique\_ptr ist ein Zeiger auf ein Objekt, auf welchen es keinen weiteren Zeiger geben darf.
+\lstinline|std::unique_ptr| ist ein Zeiger auf ein Objekt, wessen existenz allein auf diesen Zeiger beruht. Verliert dieser Zeiger den Verweis auf das Objekt, so wird das Objekt zerstört.
 
-Wohingegen ein shared\_ptr mehrere Zeiger auf dasselbe Objekt erlaubt, sobald der letzte dieser Zeiger diesen Verweis verliert wird das Objekt zerstört.
+Wohingegen ein \lstinline|std::shared_ptr| mehrere Zeiger auf dasselbe Objekt erlaubt, sobald der letzte dieser Zeiger diesen Verweis verliert wird das Objekt zerstört.
 
-weak\_ptr verhalten sich wie shared\_ptr, welche die Zerstörung des Objektes nicht verhindern, sobald also nur noch weak\_ptr auf das Objekt verweisen wird das Objekt gelöscht.
+\lstinline|std::weak_ptr| verhalten sich wie \lstinline|std::shared_ptr|, welche die Zerstörung des Objektes nicht verhindern, sobald also nur noch \lstinline|std::weak_ptr| auf das Objekt verweisen wird das Objekt gelöscht.
 
-move wird verwendet, um den einzig erlaubten Zeiger eines Objektes zu tauschen. Damit ist move für shared\_ptr nutzlos.
+\lstinline|std::auto_ptr| ist eine veraltete Version des \lstinline|std::unique_ptr|. Aufgrund der Implementation dieser sind sie ausserdem nicht für die Verwendung in Containern wie Vektoren geeignet.
 
-make\_unique und make\_shared erstellen sowohl die jeweligen Objekte, als auch die Zeiger darauf. Es gibt keine Funktion make\_weak, da ein so erstelltes Objekt direkt nach der erstellung nur einen einzelnen weak\_ptr hat und damit sofort Zerstört werden sollte.
+\lstinline|std::move| wird verwendet, um den \lstinline|std::unique_ptr| eines Objektes zu tauschen. Der alte Zeiger ist danach leer und der neue ist von dort an für die Speicherverwaltung dieses Objektes zuständig. Damit ist move für \lstinline|std::shared_ptr| nutzlos.
 
+\lstinline|std::make_unique| und \lstinline|std::make_shared| erstellen sowohl die jeweligen Objekte, als auch die Zeiger darauf. Es gibt keine Funktion \lstinline|std::make_weak|, da ein so erstelltes Objekt direkt nach der Erstellung nur einen einzelnen \lstinline|std::weak_ptr| hat und damit sofort Zerstört werden sollte.
 
-
+\subsection*{1 c)}
+Der Verweis von Kunde zurück auf das Konto darf kein \lstinline|std::shared_ptr| sein, da dann immer mindestens ein \lstinline|std::shared_ptr| auf jedes Konto zeigt und die automatische Zerstörung von Konten durch \lstinline|std::shared_ptr| niemals in Kraft treten kann.
 
 \end{document}

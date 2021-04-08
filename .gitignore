@@ -13,6 +13,7 @@
 !*.png
 !*.circ
 !*.docx
+!*.vpp
 
 
 # and these REALLY DONT! #
