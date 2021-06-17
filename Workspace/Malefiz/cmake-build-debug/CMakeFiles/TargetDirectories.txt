@@ -1,0 +1,3 @@
+/Users/lukhz/Documents/OOAD/Malefiz/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lukhz/Documents/OOAD/Malefiz/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lukhz/Documents/OOAD/Malefiz/cmake-build-debug/CMakeFiles/Malefiz.dir
