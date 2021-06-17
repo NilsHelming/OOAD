@@ -7,33 +7,31 @@ Spielfeld::Spielfeld(const std::vector<std::shared_ptr<Spieler>>& spieler){
     this->height = 4;
     int center = 8; //für die Zielposition.
     std::shared_ptr<Feld> nullFeld(nullptr);
+    //initialisiere den vektor für felder mit nullpointern!
+    this->felder = std::vector<std::shared_ptr<Feld>>(this->width * this->height, nullptr);
 
 //Erstelle Felder (des tatsächlichen Spielfeldes)
     //untere Reihe
-    for (int i = 0; i<this->width; ++i)
-        this->felder.push_back(std::make_shared<Feld>(this, i, 0, "ff4000", false));
+    int y = 0;
+    for(int x=0; x<this->width; ++x)
+        this->felder[getIndex(x,y)] = std::make_shared<Feld>(this, x, y, "ff4000", false);
 
-    //mittlere Reihe
-    this->felder.push_back(std::make_shared<Feld>(this, 0, 1, "ff4000", false));
-    for (int i = 1; i<this->width-1; ++i)
-        this->felder.push_back(nullFeld);
-    this->felder.push_back(std::make_shared<Feld>(this, this->width-1, 1, "ff4000", false));
+    //mittlere Reihe (setze [0,1] und [width-1,1])
+    this->felder[getIndex(            0,1)] = std::make_shared<Feld>(this,             0, 1, "ff4000", false);
+    this->felder[getIndex(this->width-1,1)] = std::make_shared<Feld>(this, this->width-1, 1, "ff4000", false);
 
     //obere Reihe
-    for (int i = 0; i<this->width; ++i)
-        this->felder.push_back(std::make_shared<Feld>(this, i, 2, "ff4000", false));
+    y = 2;
+    for(int x=0; x<this->width; ++x)
+        this->felder[getIndex(x,y)] = std::make_shared<Feld>(this, x, y, "ff4000", false);
 
-    //Zielfeld (und dessen Reihe)
-    for (int i = 0; i<this->width; ++i)
-        this->felder.push_back(nullFeld);
-    int Zielpos = (this->height-1)*this->width + center;
-    felder[Zielpos] = std::make_shared<Feld>(this, center, 3, "ffff00", true);
-    this->zielFeld = felder[Zielpos];
+    //Zielfeld
+    this->zielFeld = std::make_shared<Feld>(this, center, this->height-1, "ffff00", true);
+    this->felder[getIndex(center, this->height-1)] = this->zielFeld;
 
 //Erstelle Sperrsteine (im Abstand von 4, Zentriert unter dem Ziel.)
     auto sperrstein = std::make_shared<Sperrstein>();
     this->sperrsteine.push_back(sperrstein);
-    int len = this->felder.size();
     this->getFeld(center, 2)->setStein(sperrstein);
     for(int offset = 4; offset+center < this->width; offset+=4){
         sperrstein = std::make_shared<Sperrstein>();
@@ -62,8 +60,6 @@ Spielfeld::Spielfeld(const std::vector<std::shared_ptr<Spieler>>& spieler){
             ausPos->setStein(spFigur);
         }
     }
-
-
 }
 
 void Spielfeld::switchSteine(std::shared_ptr<Feld> A, std::shared_ptr<Feld> B){

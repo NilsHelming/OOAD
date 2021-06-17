@@ -50,4 +50,9 @@ public:
     void switchSteine(std::shared_ptr<Feld> A, std::shared_ptr<Feld> B);
     int getWidth() const {return width;}
     int getHeight() const {return height;}
+
+private:
+    int getIndex(int x, int y){
+        return y*width+x;
+    }
 };

@@ -43,11 +43,16 @@ void MfController::gameLoop(){
                 this->spielfeld->switchSteine(vonFeld, zuFeld);
         }
 
+        // auto feldA = this->spielfeld->getAusgangsposition(0,3);
+        // auto feldB = this->spielfeld->getZielFeld();
+
+        // this->spielfeld->switchSteine(feldA, feldB);
+
         zielStein = this->spielfeld->getZielFeld()->getStein(); //while-Bedingung!
     }
 
     auto zielFigur = dynamic_cast<Spielfigur*>(zielStein.get());
-    this->zStatus->setPrompt("Game Over! Spieler " + zielFigur->getSpieler()->getName() +" hat gewonnen!\nDrücke eine beliebige Taste, um das Programm zu beenden!");
+    this->zStatus->setPrompt("Game Over! Spieler " + zielFigur->getSpieler()->getName() +" hat gewonnen!\nDr\201cke eine beliebige Taste, um das Programm zu beenden!");
     system("pause");
 }
 
