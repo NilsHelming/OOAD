@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">KniffelHelfer</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="title_activity_spielstand_selection">Spielstand auswählen</string>
+    <string name="spielstaende_fragment_label">Spielstände</string>
+    <string name="namen_fragment_label">Namen editieren</string>
+    <string name="optionen_fragment_label">Spielstand Optionen</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="temp_spielstand_select">*Neues Spiel*</string>
+    <string name="temp_eintrag_select">*Eintrag auswählen*</string>
+    <string name="tabellen_fragment_edit">Bearb.</string>
+    <string name="eintrag_fragment_punkte">Punkte:</string>
+    <string name="tabelle_fragment_label">Spieltabelle</string>
+    <string name="eintrag_fragment_label">Eintrag Editieren</string>
+
+    <string name="kategorie_label_einsen">Einsen</string>
+    <string name="kategorie_label_zweien">Zweien</string>
+    <string name="kategorie_label_dreien">Dreien</string>
+    <string name="kategorie_label_vieren">Vieren</string>
+    <string name="kategorie_label_fuenfen">Fünfen</string>
+    <string name="kategorie_label_sechsen">Sechsen</string>
+    <string name="kategorie_label_dreierpasch">Dreierpasch</string>
+    <string name="kategorie_label_viererpasch">Viererpasch</string>
+    <string name="kategorie_label_fullhouse">FullHouse</string>
+    <string name="kategorie_label_kleinestrasse">KleineStraße</string>
+    <string name="kategorie_label_grossestrasse">GroßeStraße</string>
+    <string name="kategorie_label_kniffel">Kniffel</string>
+    <string name="kategorie_label_chance">Chance</string>
+
+
+    <string name="error">*ERROR*</string>
+</resources>

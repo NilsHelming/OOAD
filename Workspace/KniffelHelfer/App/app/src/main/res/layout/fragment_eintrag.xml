@@ -1,0 +1,217 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EintragFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="?android:attr/textCheckMark" />
+
+    <TextView
+        android:id="@+id/text_spieler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Spielername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_kategorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/kategorie_label_einsen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_spieler" />
+
+    <ToggleButton
+        android:id="@+id/button_wuerfel0"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_wuerfel1"
+        app:layout_constraintEnd_toStartOf="@+id/button_wuerfel1" />
+
+    <ToggleButton
+        android:id="@+id/button_wuerfel1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintEnd_toStartOf="@+id/guideline50"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toBottomOf="@+id/text_kategorie" />
+
+    <ToggleButton
+        android:id="@+id/button_wuerfel2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_wuerfel1"
+        app:layout_constraintStart_toEndOf="@+id/button_wuerfel1" />
+
+    <ToggleButton
+        android:id="@+id/button_wuerfel3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:autoText="false"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintEnd_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toBottomOf="@+id/button_wuerfel1" />
+
+    <ToggleButton
+        android:id="@+id/button_wuerfel4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toBottomOf="@+id/button_wuerfel1" />
+
+    <TextView
+        android:id="@+id/label_punkte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eintrag_fragment_punkte"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_punkte"
+        app:layout_constraintEnd_toStartOf="@+id/text_punkte"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_punkte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:text="123"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/label_punkte"
+        app:layout_constraintTop_toBottomOf="@+id/button_wuerfel3" />
+
+    <Button
+        android:id="@+id/button_augen1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_augen2"
+        app:layout_constraintEnd_toStartOf="@+id/button_augen2" />
+
+    <Button
+        android:id="@+id/button_augen2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline50"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toTopOf="@+id/button_wuerfel0" />
+
+    <Button
+        android:id="@+id/button_augen3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_augen2"
+        app:layout_constraintStart_toEndOf="@+id/button_augen2" />
+
+    <Button
+        android:id="@+id/button_augen4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_augen5"
+        app:layout_constraintEnd_toStartOf="@+id/button_augen5" />
+
+    <Button
+        android:id="@+id/button_augen5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/guideline50"
+        app:layout_constraintStart_toStartOf="@+id/guideline50"
+        app:layout_constraintTop_toBottomOf="@+id/button_augen2" />
+
+    <Button
+        android:id="@+id/button_augen6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="6"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_augen5"
+        app:layout_constraintStart_toEndOf="@+id/button_augen5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

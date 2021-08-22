@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/activity_spielstand_selection.xml" value="0.2957427536231884" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/content_spielstand_selection.xml" value="0.2957427536231884" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_eintrag.xml" value="0.33" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_first.xml" value="0.2957427536231884" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_first2.xml" value="0.2957427536231884" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_namen.xml" value="0.25" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_optionen.xml" value="0.28229166666666666" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_spielstaende.xml" value="0.17831813576494426" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/fragment_tabelle.xml" value="0.36666666666666664" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/layout_name_list.xml" value="0.35260416666666666" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/listview_adapter.xml" value="0.20520833333333333" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/nameview_adapter.xml" value="0.20520833333333333" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/layout/tabelleview_adapter.xml" value="0.25" />
+        <entry key="..\:/OneDrive/Dokumente/OOAD/Workspace/KniffelHelfer/App/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

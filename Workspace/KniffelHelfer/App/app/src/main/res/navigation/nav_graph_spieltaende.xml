@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/spielstandFragment">
+
+    <fragment
+        android:id="@+id/spielstandFragment"
+        android:name="com.example.kniffelhelfer.SpielstandFragment"
+        android:label="@string/spielstaende_fragment_label"
+        tools:layout="@layout/fragment_spielstand">
+
+        <action
+            android:id="@+id/action_spielstaendeFragment_to_optionenFragment"
+            app:destination="@id/optionenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionenFragment"
+        android:name="com.example.kniffelhelfer.OptionenFragment"
+        android:label="@string/optionen_fragment_label"
+        tools:layout="@layout/fragment_optionen" >
+        <action
+            android:id="@+id/action_optionenFragment_to_namenFragment"
+            app:destination="@id/namenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/namenFragment"
+        android:name="com.example.kniffelhelfer.NamenFragment"
+        android:label="@string/namen_fragment_label"
+        tools:layout="@layout/fragment_namen">
+        <action
+            android:id="@+id/action_namenFragment_to_tabellenFragment"
+            app:destination="@id/tabellenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabellenFragment"
+        android:name="com.example.kniffelhelfer.TabellenFragment"
+        android:label="@string/tabelle_fragment_label"
+        tools:layout="@layout/fragment_tabelle" >
+        <action
+            android:id="@+id/action_tabellenFragment_to_eintragFragment"
+            app:destination="@id/eintragFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eintragFragment"
+        android:name="com.example.kniffelhelfer.EintragFragment"
+        android:label="@string/eintrag_fragment_label"
+        tools:layout="@layout/fragment_eintrag" />
+</navigation>
